@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/main_background">
+    <include layout="@layout/title_bar" />
+    <LinearLayout android:orientation="vertical"
+                  android:layout_height="match_parent"
+                  android:layout_width="match_parent"
+                  android:layout_weight="0.8"
+                  android:gravity="center_horizontal|center_vertical">
+        <TextView android:id="@+id/interjectionText"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="Please enter your info below."
+                  android:textSize="9pt"
+                  android:gravity="center_horizontal">
+
+        </TextView>
+        <EditText android:id="@+id/firstName"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="10dp"
+                  android:layout_marginLeft="15dp"
+                  android:layout_marginRight="15dp"
+                  android:inputType="textPersonName"
+                  android:nextFocusDown="@+id/lastName"
+                  android:singleLine="true"
+                  android:hint="First Name" />
+        <EditText android:id="@+id/lastName"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginLeft="15dp"
+                  android:layout_marginRight="15dp"
+                  android:inputType="textPersonName"
+                  android:nextFocusDown="@+id/emailAddress"
+                  android:singleLine="true"
+                  android:hint="Last Name" />
+        <EditText android:id="@+id/emailAddress"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginLeft="15dp"
+                  android:layout_marginRight="15dp"
+                  android:inputType="textEmailAddress"
+                  android:nextFocusDown="@+id/userName"
+                  android:singleLine="true"
+                  android:hint="E-mail Address" />
+        <EditText android:id="@+id/userName"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginLeft="15dp"
+                  android:layout_marginRight="15dp"
+                  android:nextFocusDown="@+id/password"
+                  android:singleLine="true"
+                  android:hint="Username" />
+        <EditText android:id="@+id/password"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginLeft="15dp"
+                  android:layout_marginRight="15dp"
+                  android:hint="Password"
+                  android:singleLine="true"
+                  android:password="true"/>
+
+    </LinearLayout>
+    <Button android:id="@+id/registerButton"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.2"
+            android:background="@drawable/button_background"
+            android:text="Register"
+            android:textSize="18pt"
+            android:layout_height="100dp"
+            android:layout_width="300dp"/>
+</LinearLayout>
